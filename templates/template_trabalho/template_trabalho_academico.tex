@@ -1,0 +1,165 @@
+% ------------------------------------------------------------------------------
+% LaTeX Template: Titlepage
+% This is a title page template which be used for both articles and reports.
+%
+% Copyright: http://www.howtotex.com/
+% Date: April 2011
+% ------------------------------------------------------------------------------
+
+% -------------------------------------------------------------------------------
+% Preamble
+% -------------------------------------------------------------------------------
+\documentclass[paper=a4, fontsize=11pt,twoside]{scrartcl}		% KOMA article
+
+\usepackage[a4paper,pdftex]{geometry}					% A4paper margins
+\setlength{\oddsidemargin}{5mm}						% Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\usepackage[titletoc]{appendix}
+%\usepackage{floatrow}
+%\usepackage{tocloft}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{scopes}
+\usepackage{pdfpages}
+\usepackage{lipsum}
+
+
+% Table float box with bottom caption, box width adjusted to content
+%\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+\newcommand{\source}[1]{\caption*{Fonte: {#1}} }
+
+%\usepackage{titlesec}
+%\usepackage[toc,page]{appendix}
+
+
+%\titleformat{\chapter}
+%  {\Large\bfseries} % format
+%  {}                % label
+%  {0pt}             % sep
+%  {\huge}           % before-cod\source{Chapra, 2015 \cite{chapra}}e
+
+% ------------------------------------------------------------------------------
+% Definitions (do not change this)
+% ------------------------------------------------------------------------------
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\makeatletter							% Title
+\def\printtitle{%						
+    {\centering \@title\par}}
+\makeatother									
+
+\makeatletter							% Author
+\def\printauthor{%					
+    {\centering \large \@author}}				
+\makeatother			
+
+% ------------------------------------------------------------------------------
+% Metadata (Change this)
+% ------------------------------------------------------------------------------
+\title{	\normalsize \textsc{} 	% Subtitle of the document
+			\includegraphics[scale=.2]{logo.pdf}\\[1cm]             % logo
+			\HRule{0.5pt} \\					% Upper rule
+			\LARGE \textbf{\uppercase{Nome da Disciplina}} \\	% Title
+			\large \textbf{\uppercase{Título do Trabalho}}	        % Title
+		    \HRule{2pt}  					% Lower rule + 0.5cm spacing
+			\\[0.5cm]
+			\normalsize Cidade, dd de Mês de yyyy%\today		% Todays date
+		}
+
+\author{
+		Nome Sobrenome\\	
+		Universidade\\	
+		Departamento/Programa de Pós Graduação\\
+        \texttt{meuemail@exemplo.com} \\
+}
+
+
+\begin{document}
+% ------------------------------------------------------------------------------
+% Maketitle
+% ------------------------------------------------------------------------------
+\thispagestyle{empty}				% Remove page numbering on this page
+
+\printtitle					% Print the title data as defined above
+  	\vfil
+\printauthor					% Print the author data as defined above
+\newpage
+%\renewcommand{\cftfigfont}{Fig.}
+%\renewcommand{\cfttabfont}{Tab.}
+\tableofcontents
+%\listoffigures
+%\listoftables
+\newpage
+\openup 1em
+\section{Objetivos}
+
+\lipsum[1]
+
+\begin{itemize}
+    \item Objetivo 1;
+    \item Obejtivo 2;
+\end{itemize}
+
+\section{Desenvolvimento}
+
+\subsection{Subseção 1}
+
+\lipsum[4-7]
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{./logo.pdf}
+  \caption{Modelo de saliência de classificação de stakeholders \cite{apostilafgv}}
+  \label{fig:quad}
+\end{figure}
+
+
+\textbf{Ponto importante 1:} \lipsum[8].
+
+\textbf{Ponto importante 2:} \lipsum[9].
+
+
+\subsection{Subseção 2}
+
+Citação PMBOK\cite{pmbok} \lipsum[10-12].
+
+
+\phantomsection
+
+\addcontentsline{toc}{section}{Referências}
+
+\begin{thebibliography}{1}
+
+\bibitem{apostilafgv}
+  Marcantonio Fabra,
+  \emph{Gerenciamento de Comunicação e Stakeholders em Projetos},
+  São Paulo,
+  Editora FGV
+
+\bibitem{pmbok}
+    Project Management Institute, Inc.,
+    \emph{Guia do Conhecimento em Gerenciamento de Projetos},
+    ISBN: 978-1-62825-192-0
+
+
+  
+
+\end{thebibliography}
+
+
+\end{document}
+
+
