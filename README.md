@@ -6,7 +6,7 @@ Repositório com material do seminário "Recursos do $\LaTeX$ para trabalhos aca
 
 ## Slides
 
-Para acessar os slides da apresentação, basta baixar o repositório, acessar a pasta slides e abrir o arquivo /slides.html/ em seu navegador.
+Para acessar os slides da apresentação, basta baixar o repositório, acessar a pasta slides e abrir o arquivo *slides.html* em seu navegador.
 
 ## Templates
 
@@ -15,9 +15,9 @@ A melhor maneira de navegar os templates é carrega-los no [Overleaf](https://ww
 Foram incluídos:
 
 * Exemplos mínimos de documentos em $\LaTeX$;
-* Template de artigo: Baseado na classe da Elsevier, procurar os arquivos /.tex/ com início /elsarticle-template/;
-* Template de dissertação: Editar arquivo /main.tex/ e referir a documentação do projeto [Abntex](https://www.abntex.net.br/);
-* Template de trabalho acadêmico: Editar arquivo /template_trabalho_academico.tex/;
+* Template de artigo: Baseado na classe da Elsevier, procurar os arquivos *.tex* com início *elsarticle-template*;
+* Template de dissertação: Editar arquivo *main.tex* e referir a documentação do projeto [Abntex](https://www.abntex.net.br/);
+* Template de trabalho acadêmico: Editar arquivo *template_trabalho_academico.tex*;
 
 Como um princípio guia, é recomendado que o usuário, em especial o iniciante, evite realizar modificações na forma do template. É oportuno delegar ao $\LaTeX$ a forma do documento, para que o autor atenha-se ao conteúdo.
 
